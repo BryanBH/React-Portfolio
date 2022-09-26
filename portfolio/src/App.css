@@ -1,0 +1,55 @@
+.App {
+  text-align: center;
+}
+
+.section{
+  height: 90vh;
+}
+
+.intro {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("./images/Laptop.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 95vh;
+
+}
+
+.portrait{
+  width: inherit;
+  height: inherit;
+}
+
+.card:hover{
+  cursor: pointer;
+}
+.card-img-top {
+  width: 100%;
+  height: 30vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+.overlay{
+  position: fixed;
+  top: 0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 50;
+}
+
+.icon {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+}
+
+.exit{
+  width: 30px;
+  height: 30px;
+}
+footer {
+  font-size: 0.8rem;
+}

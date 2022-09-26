@@ -1,0 +1,28 @@
+$primary: #82b3b9;
+$secondary: #b9b5b4;
+$info: #66849c;
+$success: #5cb070;
+$warning: #daa038;
+$danger: #f44336;
+$light: #fbfafa;
+$dark: #66849c;
+$darkAccent: #969ea9;
+$evenDarker: #4f677a;
+
+$theme-colors: (
+  primary: $primary,
+  secondary: $secondary,
+  success: $success,
+  info: $info,
+  warning: $warning,
+  danger: $danger,
+  light: $light,
+  dark: $dark,
+  darkAccent: $darkAccent,
+  evenDarker: $evenDarker,
+);
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap");
+$font-family-sans-serif: "Open Sans", serif;
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
