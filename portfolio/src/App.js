@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="bg-light vh-100">
+    <div className="bg-light main-container">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

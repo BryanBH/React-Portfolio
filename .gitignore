@@ -1,9 +1,7 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
 portfolio/node_modules
 portfolio/.pnp
 portfolio/.pnp.js
+backend/node_modules
 
 # testing
 portfolio/coverage
