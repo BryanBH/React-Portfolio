@@ -3,6 +3,7 @@ if (process.env.NODE_ENV !== "production") {
 }
 const express = require("express");
 const app = express();
+const path = require("path");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const nodeMailer = require("nodeMailer");
@@ -10,6 +11,8 @@ const port = process.env.PORT || 4000;
 
 app.use(cors());
 app.use(bodyParser.json());
+// Have Node serve the files for our built React app
+app.use(express.static(path.resolve(__dirname, "../portfolio/build")));
 
 app.listen(port, () => {
   console.log(`Listening on port: ${port}`);
@@ -31,7 +34,7 @@ const todaysDate = () => {
   const mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
   const yyyy = today.getFullYear();
 
-  return today = mm + "/" + dd + "/" + yyyy;
+  return (today = mm + "/" + dd + "/" + yyyy);
 };
 app.post("/sendContact", (req, res) => {
   const { firstName, lastName, email, message } = req.body.inputValues;
@@ -53,4 +56,8 @@ app.post("/sendContact", (req, res) => {
   });
 
   res.json({ sent: true });
+});
+
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../portfolio/build", "index.html"));
 });
