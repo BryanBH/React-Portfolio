@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1ca42f95.css",
+    "main.js": "/static/js/main.18a1ebfe.js",
+    "static/media/graduation.png": "/static/media/graduation.064c52fc61174f0f9f81.png",
+    "static/media/Laptop.jpg": "/static/media/Laptop.a93cdde53e1d9eb8c908.jpg",
+    "static/media/study.png": "/static/media/study.fe0bdeab88ebb97e4a8a.png",
+    "static/media/yelpCamp.jpg": "/static/media/yelpCamp.10aa74f231878bc52d5b.jpg",
+    "static/media/rest.jpg": "/static/media/rest.8cafd7c85017c9395d6e.jpg",
+    "index.html": "/index.html",
+    "main.1ca42f95.css.map": "/static/css/main.1ca42f95.css.map",
+    "main.18a1ebfe.js.map": "/static/js/main.18a1ebfe.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1ca42f95.css",
+    "static/js/main.18a1ebfe.js"
+  ]
+}
