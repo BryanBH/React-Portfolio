@@ -6,7 +6,7 @@ const app = express();
 const path = require("path");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const nodeMailer = require("nodeMailer");
+const nodeMailer = require("nodemailer");
 const port = process.env.PORT || 4000;
 
 app.use(cors());
