@@ -19,7 +19,7 @@
 .portrait {
   width: inherit;
   height: inherit;
-  object-position: center;
+  object-position: bottom;
 }
 
 .card:hover {
@@ -69,10 +69,27 @@
   backdrop-filter: blur(2px);
 }
 
-.modal-container{
+.modal-container {
   width: 80%;
+  /* overflow-y: scroll; */
 }
 footer {
   font-size: 0.8rem;
   min-height: calc(100vh -23.195px);
+}
+
+@media screen and (max-width: 576px) {
+  .job-title {
+    font-size: 1.1rem;
+  }
+  .img-mobile-sizing {
+    margin-top: 11rem;
+  }
+  .modal-container{
+    height: auto;
+    font-size: 1rem;
+  }
+  .modal-text{
+    font-size: .9rem;
+  }
 }

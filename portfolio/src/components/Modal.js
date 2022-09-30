@@ -6,28 +6,28 @@ export default function Modalt({ repo, close }) {
   const repoLink = repo.url ? repo.url : repo.repo;
   return (
     <motion.div
-      className=" container text-white d-flex justify-content-center align-items-center "
+      className=" modal-container container text-white d-flex justify-content-center align-items-center "
       variants={modalVariant}>
       <motion.div
         variants={modalVariant}
-        className="row bg-evenDarker p-3 rounded-3 shadow-lg position-relative">
-        <motion.div className="col-12 col-md-6 my-2 d-flex justify-content-center">
+        className="row bg-evenDarker p-3 rounded-3 shadow-lg position-relative ">
+        <motion.div className="col-12 col-md-6 my-2 d-flex justify-content-center d-none d-lg-block">
           <motion.img
             variants={imgVariant}
             src={repo.img}
             alt="repo pic"
-            className="img-fluid rounded shadow-lg icon"
+            className="img-fluid rounded shadow-lg icon "
           />
         </motion.div>
         <motion.div
           vairants={textVariant}
-          className="col-12 col-md-6 text-center pt-2">
+          className="col-12 col-lg-6 text-center pt-2 ">
           <motion.div className="row d-flex justify-content-center align-items-center flex-column">
-            <motion.div variants={textRow} className="col">
-              <h2>{repo.name}</h2>
-            </motion.div>
             <motion.div variants={textRow} className="col lead">
-              <p className="px-5">
+              <h2 className="modal-text">{repo.name}</h2>
+            </motion.div>
+            <motion.div variants={textRow} className="col">
+              <p className="modal-text">
                 {repo.description ? repo.description : repo.shortDescription}
               </p>
             </motion.div>

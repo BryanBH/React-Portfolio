@@ -16,13 +16,13 @@ export default function About() {
       animate="animate"
       exit="exit"
       variants={variants}
-      className="section border rounded shadow bg-dark container-lg overflow-auto d-flex align-items-center mt-auto">
+      className=" section border rounded shadow bg-dark container-lg overflow-auto d-flex align-items-center mt-auto">
       <div className="row align-items-center justify-content-center pe-1">
-        <div className="col-sm-9 col-md-10 col-lg-7 d-flex justify-content-center ">
+        <div className="col-sm-9 col-md-10 col-lg-7 d-flex justify-content-center img-mobile-sizing">
           <img
             src={pic}
-            alt="about me portrait"
-            className="portrait shadow-lg rounded img-fluid pt-2"
+            alt="about me portrait "
+            className="portrait shadow-lg rounded  pt-2"
           />
         </div>
         <div className="col-12 col-md-12 col-lg-5 text-center py-3 ">

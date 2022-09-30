@@ -17,7 +17,7 @@ const repos = [
     shortDescription:
       "Online study aid web page where users can play their spotify playlists and talk in shared rooms while studying/doing homework/working",
     description:
-      "3D Study Aid is a web platform designed to improve the studying experience by suggesting 3D models as a background image. 3D Study Aid creates a custom playlist by connecting Spotify accounts to provide a more personalized listening experience. In addition, 3D Study Aid provides a chat room feature for users to listen and send messages together. In collaboration with two classmates, we aimed our target audience to be mainly students as they are whom spend most time getting distracted whilst working on assignments or projects.",
+      "3D Study Aid is a web platform designed to improve the studying experience by suggesting 3D models as a background image. The application creates custom playlist by connecting Spotify accounts to provide a more personalized listening experience. In addition, 3D Study Aid provides a chat room feature for users to listen and send messages together. In collaboration with two classmates, we aimed our target audience to be mainly students as they are whom spend most time getting distracted whilst working on assignments or projects.",
     img: study,
     url: "",
     repo: "https://github.com/BryanBH/3D_StudyAid",

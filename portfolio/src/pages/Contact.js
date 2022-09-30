@@ -117,7 +117,7 @@ export default function Contact({ setShow, setFlashMessage }) {
             </div>
           </form>
         </div>
-        <div className="col-12 col-lg-5">
+        <div className="col-12 col-lg-5 text-center mt-2">
           <h3>Quick Contact</h3>
           <p>
             <strong>Phone: </strong> <br />
@@ -133,21 +133,21 @@ export default function Contact({ setShow, setFlashMessage }) {
           <p className="fs-2">
             <a
               href="https://www.linkedin.com/in/bryan-benjumea/"
-              className="text-evenDarker"
+              className="text-secondary"
               target="_blank"
               rel="noreferrer">
               <AiFillLinkedin />
             </a>{" "}
             <a
               href="https://www.instagram.com/bryan_benjumea/"
-              className="text-evenDarker"
+              className="text-secondary"
               target="_blank"
               rel="noreferrer">
               <AiFillInstagram />
             </a>{" "}
             <a
               href="https://github.com/BryanBH"
-              className="text-evenDarker"
+              className="text-secondary"
               target="_blank"
               rel="noreferrer">
               <AiFillGithub />
