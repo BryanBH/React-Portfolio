@@ -6,7 +6,6 @@ import Modal from "../components/Modal";
 import { AnimatePresence } from "framer-motion";
 export default function RepoLayout({ repo }) {
   const [open, setOpen] = useState(false);
-  // const [currentRepo, setCurrentRepo] = useState({});
   const openModal = () => {
     setOpen(true);
   };
@@ -19,7 +18,7 @@ export default function RepoLayout({ repo }) {
       <AnimatePresence>
         {open && (
           <Overlay close={closeModal}>
-            <Modal show={open} repo={repo} close={closeModal} />
+            <Modal repo={repo} close={closeModal} />
           </Overlay>
         )}
       </AnimatePresence>

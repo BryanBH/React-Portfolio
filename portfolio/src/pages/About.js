@@ -1,6 +1,7 @@
+import "../App.css";
 import React, { useState } from "react";
 import pic from "../images/graduation.png";
-import "../App.css";
+import { motion } from "framer-motion";
 export default function About() {
   const [language, setLanguage] = useState("Español");
 
@@ -9,20 +10,26 @@ export default function About() {
   };
 
   return (
-    <>
-      <div className="section border rounded shadow bg-dark container-lg overflow-auto d-flex align-items-center">
-        <div className="row align-items-center pe-1">
-          <div className="col-12 col-md-7 d-flex justify-content-center ">
-            <img
-              src={pic}
-              alt="about me portrait"
-              className="portrait shadow-lg rounded img-fluid"
-            />
-          </div>
-          <div className="col col-md-5 text-center py-3 ">
-            <div className="row d-flex justify-content-center flex-column  px-3">
-              <div className="col text-light">
-                {language === "Español" ? <EnglishText /> : <SpanishText />}
+    <motion.div
+      transition={{ duration: 1.2 }}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      variants={variants}
+      className="section border rounded shadow bg-dark container-lg overflow-auto d-flex align-items-center mt-auto">
+      <div className="row align-items-center justify-content-center pe-1">
+        <div className="col-sm-9 col-md-10 col-lg-7 d-flex justify-content-center ">
+          <img
+            src={pic}
+            alt="about me portrait"
+            className="portrait shadow-lg rounded img-fluid pt-2"
+          />
+        </div>
+        <div className="col-12 col-md-12 col-lg-5 text-center py-3 ">
+          <div className="row d-flex justify-content-center flex-column  px-3">
+            <div className="col text-light">
+              {language === "Español" ? <EnglishText /> : <SpanishText />}
+              <div className="col">
                 <button
                   className="btn btn-darkAccent text-light"
                   onClick={handleChange}>
@@ -33,7 +40,7 @@ export default function About() {
           </div>
         </div>
       </div>
-    </>
+    </motion.div>
   );
 }
 
@@ -72,4 +79,16 @@ const SpanishText = () => {
       </p>
     </>
   );
+};
+
+const variants = {
+  initial: {
+    opactiy: 0,
+    // clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+  },
+  animate: {
+    opactiy: 1,
+    clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+  },
+  exit: { clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)" },
 };

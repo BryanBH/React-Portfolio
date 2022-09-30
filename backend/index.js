@@ -1,30 +1,56 @@
 if (process.env.NODE_ENV !== "production") {
   require("dotenv").config();
 }
-import express from "express";
+const express = require("express");
 const app = express();
-import cors from "cors";
-import { json } from "body-parser";
-import { createTransport } from "nodemailer";
+const cors = require("cors");
+const bodyParser = require("body-parser");
+const nodeMailer = require("nodeMailer");
 const port = process.env.PORT || 4000;
 
 app.use(cors());
-app.use(json());
+app.use(bodyParser.json());
 
 app.listen(port, () => {
   console.log(`Listening on port: ${port}`);
 });
 
+const transporter = nodeMailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: "bryanbenjumeaportfolio@gmail.com",
+    pass: "uwwkhfbgnjlocrwc",
+  },
+});
+
+transporter.verify((err) => (err ? console.log(err) : null));
+
+const todaysDate = () => {
+  let today = new Date();
+  const dd = String(today.getDate()).padStart(2, "0");
+  const mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+  const yyyy = today.getFullYear();
+
+  return today = mm + "/" + dd + "/" + yyyy;
+};
 app.post("/sendContact", (req, res) => {
-  console.log(req.body);
-  res.json({ status: 200 });
-  const transporter = createTransport({
-    port: 465, // true for 465, false for other ports
-    host: "smtp.gmail.com",
-    auth: {
-      user: "youremail@gmail.com",
-      pass: "password",
+  const { firstName, lastName, email, message } = req.body.inputValues;
+  const mailData = {
+    from: process.env.EMAIL, // sender address
+    to: "bryanbenjumea@gmail.com", // list of receivers
+    subject: `Portfolio Contact Request ${firstName} ${todaysDate()}`,
+    text: message,
+    html: `<h2>Message from: ${firstName} ${lastName}</h2>
+    <h5>Email: ${email}</h5>
+    <p>${message}</p>`,
+    envelope: {
+      from: email, // sender address
+      to: "bryanbenjumea@gmail.com", // list of receivers
     },
-    secure: true,
+  };
+  transporter.sendMail(mailData, (err) => {
+    if (err) console.log(err);
   });
+
+  res.json({ sent: true });
 });

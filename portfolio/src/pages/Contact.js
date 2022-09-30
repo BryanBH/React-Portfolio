@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { AiFillLinkedin, AiFillInstagram, AiFillGithub } from "react-icons/ai";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
-export default function Contact() {
+export default function Contact({ setShow, setFlashMessage }) {
+  const navaigate = useNavigate();
   const [inputValues, setInputValues] = useState({
     firstName: "",
     lastName: "",
@@ -17,16 +20,27 @@ export default function Contact() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    console.log(inputValues);
     await axios
       .post("http://localhost:4000/sendContact", { inputValues })
       .then((res) => {
         setInputValues({ firstName: "", lastName: "", email: "", message: "" });
+        console.log(res.data);
       })
       .catch((err) => console.log(err));
-    console.log(inputValues.firstName);
+    setFlashMessage("Contact Information sent!");
+    setShow(true);
+    navaigate("/");
   };
+
   return (
-    <div className="contact-section container-fluid d-flex justify-content-center align-items-center">
+    <motion.div
+      transition={{ duration: 1.2 }}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      variants={variants}
+      className="contact-section container-fluid d-flex justify-content-center align-items-center">
       <div className="row text-evenDarker">
         <div className="col-12 col-lg-7 rounded-2 glass p-3">
           <form onSubmit={handleSubmit}>
@@ -119,20 +133,40 @@ export default function Contact() {
           <p className="fs-2">
             <a
               href="https://www.linkedin.com/in/bryan-benjumea/"
-              className="text-evenDarker">
+              className="text-evenDarker"
+              target="_blank"
+              rel="noreferrer">
               <AiFillLinkedin />
             </a>{" "}
             <a
               href="https://www.instagram.com/bryan_benjumea/"
-              className="text-evenDarker">
+              className="text-evenDarker"
+              target="_blank"
+              rel="noreferrer">
               <AiFillInstagram />
             </a>{" "}
-            <a href="https://github.com/BryanBH" className="text-evenDarker">
+            <a
+              href="https://github.com/BryanBH"
+              className="text-evenDarker"
+              target="_blank"
+              rel="noreferrer">
               <AiFillGithub />
             </a>
           </p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
+
+const variants = {
+  initial: {
+    opactiy: 0,
+    // clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+  },
+  animate: {
+    opactiy: 1,
+    clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+  },
+  exit: { clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)" },
+};

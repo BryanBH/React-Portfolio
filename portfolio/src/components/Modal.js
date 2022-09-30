@@ -6,7 +6,7 @@ export default function Modalt({ repo, close }) {
   const repoLink = repo.url ? repo.url : repo.repo;
   return (
     <motion.div
-      className="modal-container container text-white d-flex justify-content-center align-items-center "
+      className=" container text-white d-flex justify-content-center align-items-center "
       variants={modalVariant}>
       <motion.div
         variants={modalVariant}
@@ -32,7 +32,7 @@ export default function Modalt({ repo, close }) {
               </p>
             </motion.div>
             <motion.div className="col">
-              <motion.div variants={textRow} className="btn btn-dark ">
+              <motion.div variants={textRow} className="btn btn-primary ">
                 <a
                   href={repoLink}
                   target="_blank"
