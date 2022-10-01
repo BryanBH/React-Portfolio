@@ -73,6 +73,11 @@
   width: 80%;
   /* overflow-y: scroll; */
 }
+
+.notfound {
+  width: 60%;
+  height: 60%;
+}
 footer {
   font-size: 0.8rem;
   min-height: calc(100vh -23.195px);
@@ -85,11 +90,11 @@ footer {
   .img-mobile-sizing {
     margin-top: 11rem;
   }
-  .modal-container{
+  .modal-container {
     height: auto;
     font-size: 1rem;
   }
-  .modal-text{
-    font-size: .9rem;
+  .modal-text {
+    font-size: 0.9rem;
   }
 }

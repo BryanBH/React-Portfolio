@@ -49,13 +49,17 @@ const EnglishText = () => {
     <>
       <h2>About Me</h2>
       <p>
-        There are many variations of passages of Lorem available, but the
-        lteration in some form, by injected humour lebmid ipsum by injected
-        humour lebmid. There are many variations of passages of Lorem, but the
-        majority have suffered lebmid by injected.There are many variations of
-        passages of Lorem available, but the lteration in some form, by injected
-        humour lebmid ipsum by injected humour lebmid. There are many variations
-        of passages of Lorem, but the majority have suffered lebmid by injected.
+        I am a newly Computer Science graduate raised by immigrant parents. My
+        interests are in full stack development, specifically in web
+        development. I have experience working in both healthcare technology and
+        in academic information technologies. These past experiences in tech
+        have introduced me to software development related topics like agile
+        development, QA testing, and scrum meetings, some of which were
+        reinforced during my academic courses. My preferred language is
+        Javascript, however I have implemented assignments and projects in other
+        languages like Java, Python, R and C. As a bilingual native speaker, I
+        have had the pleasure of working and collaborating with outstanding
+        human beings originating from the USA, Spain and South America.
       </p>
     </>
   );

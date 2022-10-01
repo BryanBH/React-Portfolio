@@ -9,6 +9,7 @@ import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import Flash from "./components/Flash";
 import { AnimatePresence } from "framer-motion";
+import NotFound from "./pages/NotFound";
 function App() {
   const [show, setShow] = useState(false);
   const [flashMessage, setFlashMessage] = useState("");
@@ -29,7 +30,7 @@ function App() {
               <Contact setShow={setShow} setFlashMessage={setFlashMessage} />
             }
           />
-          <Route path="*" element={<h1>Page not found</h1>} />
+          <Route path="*" element={<NotFound/>} />
         </Routes>
       </AnimatePresence>
       <Footer />
