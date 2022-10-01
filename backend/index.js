@@ -14,6 +14,7 @@ app.use(bodyParser.json());
 // Have Node serve the files for our built React app
 app.use(express.static(path.join(__dirname + "/public")));
 
+
 app.listen(port, () => {
   console.log(`Listening on port: ${port}`);
 });
