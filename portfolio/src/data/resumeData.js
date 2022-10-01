@@ -2,7 +2,7 @@ const resume = [
   {
     name: "North East Security",
     title: "Security Officer",
-    date: "Mar 2022 - Present",
+    date: "Feb 2022 - Present",
     deberes: [
       "Secures premises and personnel by patrolling property, monitoring surveillance equipment, and access points.",
       "Knowledge of basic security and fire inspection procedures.",
