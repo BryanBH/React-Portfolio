@@ -80,7 +80,7 @@
 }
 .footer-adjust {
   font-size: 0.8rem;
-  height: calc(100vh -23.195px);
+  max-height: calc(100vh -23.195px);
 }
 
 @media screen and (max-width: 576px) {
