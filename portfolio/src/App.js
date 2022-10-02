@@ -1,4 +1,5 @@
 import "./App.scss";
+import "./App.css";
 import { useState } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
@@ -30,7 +31,7 @@ function App() {
               <Contact setShow={setShow} setFlashMessage={setFlashMessage} />
             }
           />
-          <Route path="*" element={<NotFound/>} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </AnimatePresence>
       <Footer />

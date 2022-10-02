@@ -78,9 +78,9 @@
   width: 60%;
   height: 60%;
 }
-footer {
+.footer-adjust {
   font-size: 0.8rem;
-  min-height: calc(100vh -23.195px);
+  height: calc(100vh -23.195px);
 }
 
 @media screen and (max-width: 576px) {

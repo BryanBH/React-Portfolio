@@ -8,7 +8,7 @@ export default function Footer() {
   if (pathname === "/") return null;
 
   return (
-    <footer className="container-fluid text-center pt-1 bg-light text-muted ">
+    <footer className=" footer-adjust container-fluid text-center pt-1 bg-light text-muted ">
       &copy; 2022 BRYAN BENJUMEA. ALL RIGHTS RESERVED
     </footer>
   );
