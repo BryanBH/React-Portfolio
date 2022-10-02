@@ -12,7 +12,7 @@ const port = process.env.PORT || 4000;
 app.use(cors());
 app.use(bodyParser.json());
 // Have Node serve the files for our built React app
-app.use(express.static(path.join(__dirname + "/public")));
+app.use(express.resolve(path.join(__dirname, "../portfolio/build")));
 
 
 app.listen(port, () => {
@@ -60,5 +60,5 @@ app.post("/sendContact", (req, res) => {
 });
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../portfolio/build", "index.html"));
+  res.sendFile(path.resolve(__dirname, "../portfolio/build", "index.html"));
 });
