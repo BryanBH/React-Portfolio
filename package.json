@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cd ./backend && (npm install && node index.js)",
-    "build" : "cd ./portfolio && npm install && npm run build",
+    "start": "cd ./backend/ && npm install && node index.js",
+    "heroku-postbuild" : "cd portfolio && npm install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
