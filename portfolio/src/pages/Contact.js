@@ -22,7 +22,7 @@ export default function Contact({ setShow, setFlashMessage }) {
     event.preventDefault();
     console.log(inputValues);
     await axios
-      .post("http://localhost:4000/sendContact", { inputValues })
+      .post("/sendContact", { inputValues })
       .then((res) => {
         setInputValues({ firstName: "", lastName: "", email: "", message: "" });
         console.log(res.data);
