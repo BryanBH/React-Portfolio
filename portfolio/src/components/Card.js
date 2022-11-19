@@ -11,7 +11,7 @@ export default function Card({ repo, open, job }) {
           style={{ width: "18rem" }}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}>
-          <img src={repo.img} className="card-img-top" alt="Project" />
+          <img src={repo.img} className="card-img-top " alt="Project" />
           <div className="card-body">
             <h5 className="card-title text-primary">{repo.name}</h5>
             <p className="card-text text-darkAccent">{repo.shortDescription}</p>
